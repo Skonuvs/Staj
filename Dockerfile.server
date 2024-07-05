@@ -1,0 +1,10 @@
+FROM python:3.9-slim
+
+WORKDIR /app
+
+COPY serveryt.py .
+
+RUN mkdir -p /app/logs
+RUN chmod -R 777 /app/logs
+
+CMD ["python", "serveryt.py"]
